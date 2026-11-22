@@ -1,0 +1,155 @@
+{
+  "date": "2026-11-22T16:28:04.638Z",
+  "results": [
+    {
+      "name": "clean prompt reaches server",
+      "ok": true
+    },
+    {
+      "name": "dialog shown for flagged prompt",
+      "ok": true
+    },
+    {
+      "name": "flagged prompt blocked on Cancel",
+      "ok": true
+    },
+    {
+      "name": "flagged prompt sent on Continue",
+      "ok": true
+    },
+    {
+      "name": "clean text file reaches server",
+      "ok": true
+    },
+    {
+      "name": "dialog shown for flagged text file",
+      "ok": true
+    },
+    {
+      "name": "flagged text file blocked on Cancel",
+      "ok": true
+    },
+    {
+      "name": "dialog shown for flagged PDF",
+      "ok": true
+    },
+    {
+      "name": "flagged PDF blocked on Cancel",
+      "ok": true
+    },
+    {
+      "name": "dialog shown for flagged PNG (OCR)",
+      "ok": true
+    },
+    {
+      "name": "flagged PNG sent on Continue",
+      "ok": true
+    },
+    {
+      "name": "dialog shown for raw PUT body",
+      "ok": true
+    },
+    {
+      "name": "raw PUT blocked on Cancel",
+      "ok": true
+    },
+    {
+      "name": "gesture: dialog for flagged composer",
+      "ok": true
+    },
+    {
+      "name": "gesture: nothing sent before decision",
+      "ok": true
+    },
+    {
+      "name": "gesture: cancelled composer send never posted",
+      "ok": true
+    },
+    {
+      "name": "gesture: dialog for flagged composer (2)",
+      "ok": true
+    },
+    {
+      "name": "gesture: approved composer send posted",
+      "ok": true
+    },
+    {
+      "name": "gesture: no double dialog after Continue",
+      "ok": true
+    },
+    {
+      "name": "gesture: dialog for flagged file input",
+      "ok": true
+    },
+    {
+      "name": "gesture: cancelled file input cleared, no upload",
+      "ok": true
+    },
+    {
+      "name": "gesture: dialog for flagged file input (2)",
+      "ok": true
+    },
+    {
+      "name": "gesture: approved file upload posted",
+      "ok": true
+    },
+    {
+      "name": "collision: dialog for file A",
+      "ok": true
+    },
+    {
+      "name": "collision: file A posted after approval",
+      "ok": true
+    },
+    {
+      "name": "collision: same-name/size different file gets its OWN dialog",
+      "ok": true
+    },
+    {
+      "name": "collision: second file never posted",
+      "ok": true
+    },
+    {
+      "name": "laundering: different flagged payload gets its own dialog",
+      "ok": true
+    },
+    {
+      "name": "laundering: different payload never posted",
+      "ok": true
+    },
+    {
+      "name": "mixed: dialog for composer",
+      "ok": true
+    },
+    {
+      "name": "mixed: approved field + unapproved field gets its OWN dialog",
+      "ok": true
+    },
+    {
+      "name": "mixed: bundled body never posted",
+      "ok": true
+    },
+    {
+      "name": "cross-origin: dialog for composer",
+      "ok": true
+    },
+    {
+      "name": "cross-origin: same-origin send posted via approval",
+      "ok": true
+    },
+    {
+      "name": "cross-origin: different origin gets its OWN dialog",
+      "ok": true
+    },
+    {
+      "name": "cross-origin: nothing posted to the other origin",
+      "ok": true
+    },
+    {
+      "name": "AI response recolored",
+      "ok": true
+    }
+  ],
+  "passed": 37,
+  "total": 37
+}

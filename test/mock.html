@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <title>Walled DLP Guard - self test</title>
+    <style>
+      body { font-family: sans-serif; margin: 2rem; }
+      button { display: block; margin: 0.4rem 0; padding: 0.5rem 1rem; }
+      .prose { margin-top: 2rem; padding: 1rem; border: 1px solid #ccc; }
+      #log { margin-top: 1rem; font-family: monospace; white-space: pre-wrap; }
+    </style>
+  </head>
+  <body>
+    <h1>Walled DLP Guard self-test</h1>
+
+    <h2>Prompt flows (fetch JSON)</h2>
+    <button id="prompt-clean">Send CLEAN prompt</button>
+    <button id="prompt-flagged">Send FLAGGED prompt (WALLED_SENSITIVE)</button>
+
+    <h2>Upload flows (multipart FormData)</h2>
+    <button id="file-clean">Upload CLEAN text file</button>
+    <button id="file-txt">Upload FLAGGED text file</button>
+    <button id="file-pdf">Upload FLAGGED PDF</button>
+    <button id="file-png">Upload FLAGGED image (PNG)</button>
+
+    <h2>Raw body flow (presigned-PUT style)</h2>
+    <button id="file-raw">PUT FLAGGED text as raw body</button>
+
+    <h2>Gesture flows (composer + file input, like real AI chat UIs)</h2>
+    <textarea id="composer" rows="2" cols="50" placeholder="Type a prompt and press Enter"></textarea>
+    <button id="composer-send" aria-label="Send message">Send</button>
+    <input type="file" id="file-input" />
+    <div id="drop-zone" style="margin-top:0.5rem;padding:1rem;border:2px dashed #999;">Drop a file here</div>
+
+    <h2>AI response area</h2>
+    <div class="prose">
+      <p>This block stands in for an AI-generated response and should appear in the recolored style.</p>
+    </div>
+
+    <div id="log"></div>
+
+    <script>
+      const log = (m) => {
+        document.getElementById('log').textContent += m + '\n';
+      };
+
+      async function postJSON(body) {
+        try {
+          const r = await fetch('/ask', { method: 'POST', headers: { 'content-type': 'application/json' }, body: JSON.stringify(body) });
+          log('server responded ' + r.status);
+        } catch (e) {
+          log('request failed: ' + e.name + ' ' + e.message);
+        }
+      }
+
+      async function uploadFile(path, name, type) {
+        const resp = await fetch(path);
+        const buf = await resp.arrayBuffer();
+        const fd = new FormData();
+        fd.append('file', new File([buf], name, { type }));
+        try {
+          const r = await fetch('/upload', { method: 'POST', body: fd });
+          log(name + ': server responded ' + r.status);
+        } catch (e) {
+          log(name + ': request failed: ' + e.name + ' ' + e.message);
+        }
+      }
+
+      async function putRaw() {
+        const buf = new TextEncoder().encode('confidential note: WALLED_SENSITIVE internal numbers');
+        try {
+          const r = await fetch('/upload-raw', { method: 'PUT', headers: { 'content-type': 'application/octet-stream' }, body: buf });
+          log('raw PUT: server responded ' + r.status);
+        } catch (e) {
+          log('raw PUT: request failed: ' + e.name + ' ' + e.message);
+        }
+      }
+
+      document.getElementById('prompt-clean').onclick = () => postJSON({ message: 'hello there, nothing sensitive' });
+      // Composer: Enter (no shift) or Send button posts the text
+      function sendComposer() {
+        const ta = document.getElementById('composer');
+        const text = ta.value;
+        if (!text.trim()) return;
+        ta.value = '';
+        // Test hook: WITH_EXTRA simulates an app bundling an extra flagged
+        // field into the same body as the approved prompt (mixed body).
+        const payload = { message: text };
+        if (text.includes('WITH_EXTRA')) payload.context = 'hidden WALLED_SENSITIVE second item';
+        // Test hook: CROSS simulates the app also fanning the same approved
+        // text out to a DIFFERENT origin the user never approved.
+        if (text.includes('CROSS')) {
+          fetch('http://127.0.0.1:8900/ask', { method: 'POST', headers: { 'content-type': 'text/plain' }, body: JSON.stringify({ message: text }) })
+            .then(() => log('cross-origin POST returned'))
+            .catch((e) => log('cross-origin request failed: ' + e.name));
+        }
+        postJSON(payload);
+      }
+      document.getElementById('composer').addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' && !e.shiftKey) { e.preventDefault(); sendComposer(); }
+      });
+      document.getElementById('composer-send').addEventListener('click', sendComposer);
+
+      // Real file input: upload selected file(s) on change
+      document.getElementById('file-input').addEventListener('change', (e) => {
+        for (const f of e.target.files) {
+          const fd = new FormData();
+          fd.append('file', f, f.name);
+          fetch('/upload', { method: 'POST', body: fd })
+            .then(() => log('input upload sent: ' + f.name))
+            .catch((err) => log('input upload error: ' + err));
+        }
+      });
+
+      // Drop zone: upload dropped files
+      document.getElementById('drop-zone').addEventListener('dragover', (e) => e.preventDefault());
+      document.getElementById('drop-zone').addEventListener('drop', (e) => {
+        e.preventDefault();
+        for (const f of e.dataTransfer.files) {
+          const fd = new FormData();
+          fd.append('file', f, f.name);
+          fetch('/upload', { method: 'POST', body: fd })
+            .then(() => log('drop upload sent: ' + f.name))
+            .catch((err) => log('drop upload error: ' + err));
+        }
+      });
+
+      document.getElementById('prompt-flagged').onclick = () => postJSON({ message: 'please summarize WALLED_SENSITIVE quarterly numbers' });
+      document.getElementById('file-clean').onclick = () => uploadFile('/assets/clean.txt', 'clean.txt', 'text/plain');
+      document.getElementById('file-txt').onclick = () => uploadFile('/assets/flagged.txt', 'flagged.txt', 'text/plain');
+      document.getElementById('file-pdf').onclick = () => uploadFile('/assets/flagged.pdf', 'flagged.pdf', 'application/pdf');
+      document.getElementById('file-png').onclick = () => uploadFile('/assets/flagged.png', 'flagged.png', 'image/png');
+      document.getElementById('file-raw').onclick = putRaw;
+    </script>
+  </body>
+</html>

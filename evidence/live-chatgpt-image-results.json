@@ -1,0 +1,171 @@
+{
+  "at": "2026-11-22T16:45:48.220Z",
+  "normalSandbox": true,
+  "source": "Actual standalone app, anonymous ChatGPT, normal Add photos UI",
+  "cancelDialog": true,
+  "requestsBeforeDecision": [
+    {
+      "at": 1795365954539,
+      "id": "20247.333",
+      "url": "https://chatgpt.com/unauth-mweb/events/business",
+      "method": "POST",
+      "status": 204,
+      "queryRemovedForPrivacy": false
+    },
+    {
+      "at": 1795365954540,
+      "id": "20247.334",
+      "url": "https://chatgpt.com/unauth-mweb/events/business",
+      "method": "POST",
+      "status": 204,
+      "queryRemovedForPrivacy": false
+    },
+    {
+      "at": 1795365954540,
+      "id": "20247.335",
+      "url": "https://chatgpt.com/unauth-mweb/events/business",
+      "method": "POST",
+      "status": 204,
+      "queryRemovedForPrivacy": false
+    }
+  ],
+  "requestsAfterCancel": [
+    {
+      "at": 1795365954539,
+      "id": "20247.333",
+      "url": "https://chatgpt.com/unauth-mweb/events/business",
+      "method": "POST",
+      "status": 204,
+      "queryRemovedForPrivacy": false
+    },
+    {
+      "at": 1795365954540,
+      "id": "20247.334",
+      "url": "https://chatgpt.com/unauth-mweb/events/business",
+      "method": "POST",
+      "status": 204,
+      "queryRemovedForPrivacy": false
+    },
+    {
+      "at": 1795365954540,
+      "id": "20247.335",
+      "url": "https://chatgpt.com/unauth-mweb/events/business",
+      "method": "POST",
+      "status": 204,
+      "queryRemovedForPrivacy": false
+    }
+  ],
+  "afterCancel": "Log in\nSign up for free\nNew chat\nImages\nPlugins\nSee plans and pricing\nHelp\nDeep research\nSettings\nGet responses tailored to you\n\nLog in to get answers based on saved chats, plus create images and upload files.\n\nLog in\nWhere should we begin?\nPractice a language\nCompare two haircuts\nWrite a song chorus\nExplain something visually\nPlay twenty questions\nChat with ChatGPT\n\nChatGPT is AI. By using it, you agree to our Terms & Privacy Policy. Chats may be reviewed and used to improve our AI models. Learn more\n\nSensitive Upload Guard \u00b7 Cancelled by user",
+  "continueDialog": true,
+  "unexpectedFurtherDialog": false,
+  "requestsAfterContinue": [
+    {
+      "at": 1795365954539,
+      "id": "20247.333",
+      "url": "https://chatgpt.com/unauth-mweb/events/business",
+      "method": "POST",
+      "status": 204,
+      "queryRemovedForPrivacy": false
+    },
+    {
+      "at": 1795365954540,
+      "id": "20247.334",
+      "url": "https://chatgpt.com/unauth-mweb/events/business",
+      "method": "POST",
+      "status": 204,
+      "queryRemovedForPrivacy": false
+    },
+    {
+      "at": 1795365954540,
+      "id": "20247.335",
+      "url": "https://chatgpt.com/unauth-mweb/events/business",
+      "method": "POST",
+      "status": 204,
+      "queryRemovedForPrivacy": false
+    },
+    {
+      "at": 1795365959437,
+      "id": "20247.352",
+      "url": "https://chatgpt.com/unauth-mweb/events/business",
+      "method": "POST",
+      "status": 204,
+      "queryRemovedForPrivacy": false
+    },
+    {
+      "at": 1795365959551,
+      "id": "20247.353",
+      "url": "https://chatgpt.com/unauth-mweb/events/statsc/flush",
+      "method": "POST",
+      "status": 200,
+      "queryRemovedForPrivacy": true
+    },
+    {
+      "at": 1795365962148,
+      "id": "20247.377",
+      "url": "https://chatgpt.com/backend-anon/files",
+      "method": "POST",
+      "status": 200,
+      "queryRemovedForPrivacy": false
+    },
+    {
+      "at": 1795365962431,
+      "id": "20247.382",
+      "url": "https://files08.oaiusercontent.com/file-69K8G2RL3oNZZgLfT6Knu2",
+      "method": "PUT",
+      "status": 201,
+      "queryRemovedForPrivacy": true
+    },
+    {
+      "at": 1795365962978,
+      "id": "20247.383",
+      "url": "https://chatgpt.com/backend-anon/files/process_upload_stream",
+      "method": "POST",
+      "status": 200,
+      "queryRemovedForPrivacy": false
+    },
+    {
+      "at": 1795365964952,
+      "id": "20247.384",
+      "url": "https://chatgpt.com/unauth-mweb/events/performance",
+      "method": "POST",
+      "status": 204,
+      "queryRemovedForPrivacy": true
+    },
+    {
+      "at": 1795365967076,
+      "id": "20247.385",
+      "url": "https://chatgpt.com/unauth-mweb/events/business",
+      "method": "POST",
+      "status": 204,
+      "queryRemovedForPrivacy": false
+    }
+  ],
+  "afterContinue": {
+    "text": "Log in\nSign up for free\nNew chat\nImages\nPlugins\nSee plans and pricing\nHelp\nDeep research\nSettings\nGet responses tailored to you\n\nLog in to get answers based on saved chats, plus create images and upload files.\n\nLog in\nWhere should we begin?\nChat with ChatGPT\n\nChatGPT is AI. By using it, you agree to our Terms & Privacy Policy. Chats may be reviewed and used to improve our AI models. Learn more",
+    "images": [
+      {
+        "alt": "flagged.png",
+        "src": "blob image"
+      },
+      {
+        "alt": "",
+        "src": "https://chatgpt.com/unauth-mweb/images/drag-drop.svg"
+      },
+      {
+        "alt": "",
+        "src": ""
+      }
+    ]
+  },
+  "summary": {
+    "noFileRegistrationOrBinaryUploadBeforeDecision": true,
+    "noFileRegistrationOrBinaryUploadAfterCancel": true,
+    "analyticsRequestsOccur": true,
+    "fileRegistrationStatus": 200,
+    "binaryUploadStatus": 201,
+    "processingStatus": 200,
+    "visibleAttachment": "flagged.png",
+    "nativeCancelAndContinue": true,
+    "actualServiceOriginalByteIdentityNotVerified": true
+  }
+}

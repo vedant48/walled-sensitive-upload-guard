@@ -1,0 +1,29 @@
+[
+  {
+    "method": "POST",
+    "url": "/demo-prompt",
+    "bytes": 51,
+    "sha256": "a3363b77a0d5623d5fc36286cb95517a87e34192093f4740a8836b1aed3f81ed",
+    "marker": false
+  },
+  {
+    "method": "POST",
+    "url": "/demo-prompt",
+    "bytes": 59,
+    "sha256": "3efc94fc2375ef9d9d91ccda92a4b9e0555e35ca64af6cf7464cf66a1dc631fb",
+    "marker": true
+  },
+  {
+    "method": "POST",
+    "url": "/demo-file",
+    "bytes": 2443,
+    "sha256": "f5b7a8f966ab7a99d05a06203aa277a146891676f5834d4790900a17a87aca5f",
+    "marker": false,
+    "files": [
+      {
+        "bytes": 2259,
+        "sha256": "e05b668745b8b4c155d8dc8ac5f5e20117f031d1524c8347531a9f0c74c8ae25"
+      }
+    ]
+  }
+]

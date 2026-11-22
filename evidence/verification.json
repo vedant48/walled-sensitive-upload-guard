@@ -1,0 +1,325 @@
+{
+  "verifiedAt": "2026-11-22T16:28:09.298Z",
+  "node": "v22.23.5",
+  "chrome": "Chrome/157.0.8103.78",
+  "platform": "linux",
+  "testOnlySandboxBypass": false,
+  "liveSitesTested": false,
+  "passed": 78,
+  "total": 78,
+  "temporaryProfileRemoved": true,
+  "checks": [
+    {
+      "name": "Chrome control uses an inherited pipe, without a debugging TCP port",
+      "ok": true
+    },
+    {
+      "name": "Launcher-opened tab is guarded before its first application script",
+      "ok": true
+    },
+    {
+      "name": "Document-start probe ran on the intended local fixture",
+      "ok": true
+    },
+    {
+      "name": "Response recolor works under style-src none without CSP changes",
+      "ok": true
+    },
+    {
+      "name": "Current ChatGPT anonymous response markup is recolored",
+      "ok": true
+    },
+    {
+      "name": "Guard installs under script-src none without changing CSP",
+      "ok": true
+    },
+    {
+      "name": "clean prompt reaches server",
+      "ok": true
+    },
+    {
+      "name": "dialog shown for flagged prompt",
+      "ok": true
+    },
+    {
+      "name": "flagged prompt blocked on Cancel",
+      "ok": true
+    },
+    {
+      "name": "flagged prompt sent on Continue",
+      "ok": true
+    },
+    {
+      "name": "clean text file reaches server",
+      "ok": true
+    },
+    {
+      "name": "dialog shown for flagged text file",
+      "ok": true
+    },
+    {
+      "name": "flagged text file blocked on Cancel",
+      "ok": true
+    },
+    {
+      "name": "dialog shown for flagged PDF",
+      "ok": true
+    },
+    {
+      "name": "flagged PDF blocked on Cancel",
+      "ok": true
+    },
+    {
+      "name": "dialog shown for flagged PNG (OCR)",
+      "ok": true
+    },
+    {
+      "name": "flagged PNG sent on Continue",
+      "ok": true
+    },
+    {
+      "name": "dialog shown for raw PUT body",
+      "ok": true
+    },
+    {
+      "name": "raw PUT blocked on Cancel",
+      "ok": true
+    },
+    {
+      "name": "gesture: dialog for flagged composer",
+      "ok": true
+    },
+    {
+      "name": "gesture: nothing sent before decision",
+      "ok": true
+    },
+    {
+      "name": "gesture: cancelled composer send never posted",
+      "ok": true
+    },
+    {
+      "name": "gesture: dialog for flagged composer (2)",
+      "ok": true
+    },
+    {
+      "name": "gesture: approved composer send posted",
+      "ok": true
+    },
+    {
+      "name": "gesture: no double dialog after Continue",
+      "ok": true
+    },
+    {
+      "name": "gesture: dialog for flagged file input",
+      "ok": true
+    },
+    {
+      "name": "gesture: cancelled file input cleared, no upload",
+      "ok": true
+    },
+    {
+      "name": "gesture: dialog for flagged file input (2)",
+      "ok": true
+    },
+    {
+      "name": "gesture: approved file upload posted",
+      "ok": true
+    },
+    {
+      "name": "collision: dialog for file A",
+      "ok": true
+    },
+    {
+      "name": "collision: file A posted after approval",
+      "ok": true
+    },
+    {
+      "name": "collision: same-name/size different file gets its OWN dialog",
+      "ok": true
+    },
+    {
+      "name": "collision: second file never posted",
+      "ok": true
+    },
+    {
+      "name": "laundering: different flagged payload gets its own dialog",
+      "ok": true
+    },
+    {
+      "name": "laundering: different payload never posted",
+      "ok": true
+    },
+    {
+      "name": "mixed: dialog for composer",
+      "ok": true
+    },
+    {
+      "name": "mixed: approved field + unapproved field gets its OWN dialog",
+      "ok": true
+    },
+    {
+      "name": "mixed: bundled body never posted",
+      "ok": true
+    },
+    {
+      "name": "cross-origin: dialog for composer",
+      "ok": true
+    },
+    {
+      "name": "cross-origin: same-origin send posted via approval",
+      "ok": true
+    },
+    {
+      "name": "cross-origin: different origin gets its OWN dialog",
+      "ok": true
+    },
+    {
+      "name": "cross-origin: nothing posted to the other origin",
+      "ok": true
+    },
+    {
+      "name": "AI response recolored",
+      "ok": true
+    },
+    {
+      "name": "OCR-approved upload preserves the original image bytes",
+      "ok": true
+    },
+    {
+      "name": "Typed-array scans honor byteOffset and byteLength",
+      "ok": true
+    },
+    {
+      "name": "URL-object fetch cannot bypass prompt inspection",
+      "ok": true
+    },
+    {
+      "name": "URL-object Cancel reaches no server",
+      "ok": true
+    },
+    {
+      "name": "Request-object bodies are inspected",
+      "ok": true
+    },
+    {
+      "name": "Request-object Continue sends exactly once",
+      "ok": true
+    },
+    {
+      "name": "Request-object has no second dialog",
+      "ok": true
+    },
+    {
+      "name": "XHR produces a native confirmation before transmission",
+      "ok": true
+    },
+    {
+      "name": "XHR Cancel blocks the outgoing body",
+      "ok": true
+    },
+    {
+      "name": "XHR retry produces a fresh confirmation",
+      "ok": true
+    },
+    {
+      "name": "XHR Continue sends",
+      "ok": true
+    },
+    {
+      "name": "Prompt-change test opens native dialog",
+      "ok": true
+    },
+    {
+      "name": "Changing the prompt while dialog is open does not transmit it",
+      "ok": true
+    },
+    {
+      "name": "Changed prompt needs its own confirmation",
+      "ok": true
+    },
+    {
+      "name": "Changed prompt Cancel blocks it",
+      "ok": true
+    },
+    {
+      "name": "File input event is held before a worker upload starts",
+      "ok": true
+    },
+    {
+      "name": "Worker file upload cannot start after Cancel",
+      "ok": true
+    },
+    {
+      "name": "Worker file retry is inspected",
+      "ok": true
+    },
+    {
+      "name": "Worker file upload proceeds after Continue",
+      "ok": true
+    },
+    {
+      "name": "Worker upload retains exact original text-file bytes",
+      "ok": true
+    },
+    {
+      "name": "drop upload is held before transmission",
+      "ok": true
+    },
+    {
+      "name": "drop Cancel sends nothing",
+      "ok": true
+    },
+    {
+      "name": "drop retry asks again",
+      "ok": true
+    },
+    {
+      "name": "drop Continue sends exactly once",
+      "ok": true
+    },
+    {
+      "name": "drop does not double-prompt",
+      "ok": true
+    },
+    {
+      "name": "paste upload is held before transmission",
+      "ok": true
+    },
+    {
+      "name": "paste Cancel sends nothing",
+      "ok": true
+    },
+    {
+      "name": "paste retry asks again",
+      "ok": true
+    },
+    {
+      "name": "paste Continue sends exactly once",
+      "ok": true
+    },
+    {
+      "name": "paste does not double-prompt",
+      "ok": true
+    },
+    {
+      "name": "Malformed PDF scan failure blocks instead of failing open",
+      "ok": true
+    },
+    {
+      "name": "Oversized files are blocked, not silently skipped",
+      "ok": true
+    },
+    {
+      "name": "Image-only PDF is scanned using page OCR",
+      "ok": true
+    },
+    {
+      "name": "Scanned-PDF Cancel blocks the upload",
+      "ok": true
+    },
+    {
+      "name": "Clean image passes OCR without a native dialog",
+      "ok": true
+    }
+  ]
+}

@@ -1,0 +1,28 @@
+{
+  "results": [
+    {
+      "name": "Chrome control uses an inherited pipe, without a debugging TCP port",
+      "ok": true
+    },
+    {
+      "name": "Launcher-opened tab is guarded before its first application script",
+      "ok": true
+    },
+    {
+      "name": "Document-start probe ran on the intended local fixture",
+      "ok": true
+    },
+    {
+      "name": "Response recolor works under style-src none without CSP changes",
+      "ok": true
+    },
+    {
+      "name": "Current ChatGPT anonymous response markup is recolored",
+      "ok": true
+    },
+    {
+      "name": "Guard installs under script-src none without changing CSP",
+      "ok": true
+    }
+  ]
+}

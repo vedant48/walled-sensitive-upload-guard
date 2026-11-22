@@ -1,0 +1,42 @@
+/* Walled DLP Guard - AI response recoloring.
+ * Changes the displayed text color of AI-generated responses on ChatGPT and
+ * Perplexity. User-authored bubbles are intentionally left untouched.
+ */
+
+:root {
+  --walled-dlp-response-color: #6d28d9; /* distinctive violet */
+}
+
+/* ChatGPT: assistant turns carry data-message-author-role="assistant" */
+[data-message-author-role="assistant"] .markdown,
+[data-message-author-role="assistant"] .markdown p,
+[data-message-author-role="assistant"] .markdown li,
+[data-message-author-role="assistant"] .markdown span,
+[data-message-author-role="assistant"] .markdown div,
+article[data-testid^="conversation-turn"] .agent-turn .markdown,
+article[data-testid^="conversation-turn"] .agent-turn .markdown *:not(code):not(pre) {
+  color: var(--walled-dlp-response-color) !important;
+}
+
+/* Perplexity: generated answers render inside .prose containers */
+.prose,
+.prose p,
+.prose li,
+.prose span,
+.prose div,
+.prose h1, .prose h2, .prose h3, .prose h4 {
+  color: var(--walled-dlp-response-color) !important;
+}
+
+/* Status, not a confirmation dialog. Decisions always use the native desktop. */
+#walled-guard-notice { position:fixed !important;bottom:22px !important;right:22px !important;z-index:2147483647 !important;max-width:440px !important;padding:13px 17px !important;border:1px solid #d7cdea !important;border-radius:10px !important;background:#f6f2ff !important;color:#44316e !important;box-shadow:0 4px 22px #21153822 !important;font:13px/1.6 system-ui,sans-serif !important;pointer-events:none !important;}
+#walled-guard-notice[hidden] {display:none !important;}
+
+/* ChatGPT's current anonymous/mobile renderer identifies assistant markdown
+   by data attributes rather than the signed-in .markdown class family. */
+[data-assistant-markdown-root],
+[data-assistant-markdown-root] * {
+  color: var(--walled-dlp-response-color) !important;
+  --d-inherited-text-color: var(--walled-dlp-response-color) !important;
+  --color-text-prose: var(--walled-dlp-response-color) !important;
+}

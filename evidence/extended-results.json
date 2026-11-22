@@ -1,0 +1,144 @@
+{
+  "results": [
+    {
+      "name": "OCR-approved upload preserves the original image bytes",
+      "ok": true
+    },
+    {
+      "name": "Typed-array scans honor byteOffset and byteLength",
+      "ok": true
+    },
+    {
+      "name": "URL-object fetch cannot bypass prompt inspection",
+      "ok": true
+    },
+    {
+      "name": "URL-object Cancel reaches no server",
+      "ok": true
+    },
+    {
+      "name": "Request-object bodies are inspected",
+      "ok": true
+    },
+    {
+      "name": "Request-object Continue sends exactly once",
+      "ok": true
+    },
+    {
+      "name": "Request-object has no second dialog",
+      "ok": true
+    },
+    {
+      "name": "XHR produces a native confirmation before transmission",
+      "ok": true
+    },
+    {
+      "name": "XHR Cancel blocks the outgoing body",
+      "ok": true
+    },
+    {
+      "name": "XHR retry produces a fresh confirmation",
+      "ok": true
+    },
+    {
+      "name": "XHR Continue sends",
+      "ok": true
+    },
+    {
+      "name": "Prompt-change test opens native dialog",
+      "ok": true
+    },
+    {
+      "name": "Changing the prompt while dialog is open does not transmit it",
+      "ok": true
+    },
+    {
+      "name": "Changed prompt needs its own confirmation",
+      "ok": true
+    },
+    {
+      "name": "Changed prompt Cancel blocks it",
+      "ok": true
+    },
+    {
+      "name": "File input event is held before a worker upload starts",
+      "ok": true
+    },
+    {
+      "name": "Worker file upload cannot start after Cancel",
+      "ok": true
+    },
+    {
+      "name": "Worker file retry is inspected",
+      "ok": true
+    },
+    {
+      "name": "Worker file upload proceeds after Continue",
+      "ok": true
+    },
+    {
+      "name": "Worker upload retains exact original text-file bytes",
+      "ok": true
+    },
+    {
+      "name": "drop upload is held before transmission",
+      "ok": true
+    },
+    {
+      "name": "drop Cancel sends nothing",
+      "ok": true
+    },
+    {
+      "name": "drop retry asks again",
+      "ok": true
+    },
+    {
+      "name": "drop Continue sends exactly once",
+      "ok": true
+    },
+    {
+      "name": "drop does not double-prompt",
+      "ok": true
+    },
+    {
+      "name": "paste upload is held before transmission",
+      "ok": true
+    },
+    {
+      "name": "paste Cancel sends nothing",
+      "ok": true
+    },
+    {
+      "name": "paste retry asks again",
+      "ok": true
+    },
+    {
+      "name": "paste Continue sends exactly once",
+      "ok": true
+    },
+    {
+      "name": "paste does not double-prompt",
+      "ok": true
+    },
+    {
+      "name": "Malformed PDF scan failure blocks instead of failing open",
+      "ok": true
+    },
+    {
+      "name": "Oversized files are blocked, not silently skipped",
+      "ok": true
+    },
+    {
+      "name": "Image-only PDF is scanned using page OCR",
+      "ok": true
+    },
+    {
+      "name": "Scanned-PDF Cancel blocks the upload",
+      "ok": true
+    },
+    {
+      "name": "Clean image passes OCR without a native dialog",
+      "ok": true
+    }
+  ]
+}

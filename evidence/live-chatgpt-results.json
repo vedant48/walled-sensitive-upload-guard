@@ -1,0 +1,61 @@
+{
+  "at": "2026-11-22T16:29:37.288Z",
+  "sandbox": true,
+  "source": "Actual standalone application, logged-out public dummy-data test",
+  "sites": {
+    "chatgpt": {
+      "url": "https://chatgpt.com/",
+      "guard": true,
+      "cleanText": "Log in\nSign up for free\n\nReply with exactly READY. This is a public dummy test.\n\nREADY\n\nChatGPT is AI and can make mistakes.\n\nNew chat\nImages\nShopping\nPlugins\nSee plans and pricing\nHelp\nDeep research\nSettings\nGet responses tailored to you\n\nLog in to get answers based on saved chats, plus create images and upload files.\n\nLog in\nChat with ChatGPT",
+      "cancelDialog": true,
+      "markerRequestsBeforeDecision": 0,
+      "markerRequestsAfterCancel": 0,
+      "continueDialog": true,
+      "markerRequestsAfterContinue": 1,
+      "after": {
+        "text": "Log in\nSign up for free\n\nReply with exactly READY. This is a public dummy test.\n\nREADY\n\nFor this public dummy test, repeat WALLED_SENSITIVE.\n\nWALLED_SENSITIVE\n\nChatGPT is AI and can make mistakes.\n\nNew chat\nImages\nShopping\nPlugins\nSee plans and pricing\nHelp\nDeep research\nSettings\nGet responses tailored to you\n\nLog in to get answers based on saved chats, plus create images and upload files.\n\nLog in\nChat with ChatGPT",
+        "responses": [
+          {
+            "text": "READY",
+            "color": "rgb(109, 40, 217)",
+            "childColor": "rgb(109, 40, 217)"
+          },
+          {
+            "text": "WALLED_SENSITIVE",
+            "color": "rgb(109, 40, 217)",
+            "childColor": "rgb(109, 40, 217)"
+          }
+        ]
+      },
+      "uploadMenu": "Log in\nSign up for free\n\nReply with exactly READY. This is a public dummy test.\n\nREADY\n\nFor this public dummy test, repeat WALLED_SENSITIVE.\n\nWALLED_SENSITIVE\n\nChatGPT is AI and can make mistakes.\n\nNew chat\nImages\nShopping\nPlugins\nSee plans and pricing\nHelp\nDeep research\nSettings\nGet responses tailored to you\n\nLog in to get answers based on saved chats, plus create images and upload files.\n\nLog in\nChat with ChatGPT\nAdd photos\nWeb search\n\nLog in to use...\n\nCreate image\nDeep research\nAdd files"
+    },
+    "perplexity": {
+      "status": "Actual-app route stopped after two failed Cloudflare checkbox attempts on 2026-11-22. Not retried by this test."
+    }
+  },
+  "markerNetworkObservations": [
+    {
+      "requestId": "18069.456",
+      "timestamp": 2329.697568,
+      "url": "https://chatgpt.com/unauth-mweb/conversation/updates?lightweight_authenticated=0&operationId=1f7e6a67-f687-49ba-b009-713b29064f53",
+      "method": "POST",
+      "sessionId": "30C76379A9F45CA63EA56CD680EDFC0D"
+    },
+    {
+      "requestId": "18069.456",
+      "timestamp": 2329.697568,
+      "url": "https://chatgpt.com/unauth-mweb/conversation/updates?lightweight_authenticated=0&operationId=1f7e6a67-f687-49ba-b009-713b29064f53",
+      "method": "POST",
+      "sessionId": "DE68899814EEA461E4B52D4AA88F4FF7"
+    }
+  ],
+  "distinctMarkerRequests": [
+    {
+      "requestId": "18069.456",
+      "timestamp": 2329.697568,
+      "url": "https://chatgpt.com/unauth-mweb/conversation/updates?lightweight_authenticated=0&operationId=1f7e6a67-f687-49ba-b009-713b29064f53",
+      "method": "POST"
+    }
+  ],
+  "passed": true
+}
